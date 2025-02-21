@@ -1,0 +1,92 @@
+.createVotingSessionContainer form {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 400px;
+  gap: 1.5rem;
+  border-radius: .4rem;
+  padding: .75rem 1.5rem;
+  border: 2px solid white;
+}
+
+.inputFieldContainers {
+  width: 100%;
+}
+
+.candidateFieldsContainer {
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.candidateFieldsContainer.scrollable {
+  max-height: 140px;
+  overflow-y: auto;
+  justify-content: flex-start;
+}
+
+.candidateContainers,
+.sessionNameContainer,
+.partyCodeContainer,
+.partyCodeFromVoterContainer,
+.phoneNumberContainer,
+.userOtpContainer,
+.votePhoneNumberContainer,
+.voteUserOtpContainer {
+  position: relative;
+  width: 100%;
+}
+
+.candidateContainers label,
+.sessionNameContainer label,
+.partyCodeContainer label,
+.partyCodeFromVoterContainer label,
+.phoneNumberContainer label,
+.userOtpContainer label,
+.votePhoneNumberContainer label,
+.voteUserOtpContainer label {
+  position: absolute;
+  top: 48%;
+  transform: translateY(-50%);
+  left: .5rem;
+  pointer-events: none;
+  transition: 250ms;
+}
+
+.candidateContainers:focus-within label,
+.sessionNameContainer:focus-within label,
+.partyCodeContainer:focus-within label,
+.partyCodeFromVoterContainer:focus-within label,
+.phoneNumberContainer:focus-within label,
+.userOtpContainer:focus-within label,
+.votePhoneNumberContainer:focus-within label,
+.voteUserOtpContainer:focus-within label,
+.roleLabelActive {
+  top: 1rem !important;
+  font-size: .85rem;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 36%;
+  right: 4%;
+  height: 16px;
+  width: 16px;
+}
+
+.createSessionErrors {
+  position: static;
+}
+
+@media (max-width: 450px) {
+  .createVotingSessionContainer form {
+    width: 90vw;
+    padding: .75rem;
+  }
+
+  .createVotingSessionContainer form h1 {
+    font-size: 1.25rem;
+  }
+
+  .candidateFieldsContainer.scrollable {
+    max-height: 24vh;
+  }
+}

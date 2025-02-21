@@ -1,0 +1,108 @@
+.headingContainer {
+  margin-bottom: 1.2rem;
+}
+
+.votingSessionsContainers>p {
+  margin-top: .5rem;
+}
+
+#createSessionBottom {
+  margin-bottom: 1rem;
+}
+
+.sessionTableContainer {
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sessionTableContainer.scrollable {
+  max-height: 50vh;
+  overflow-y: auto;
+  justify-content: flex-start;
+}
+
+.sessionsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.sessionsTable th,
+.sessionsTable td {
+  border: 2px solid white;
+  padding: .5rem;
+  text-align: center;
+}
+
+.deleteVSBtnWrapperBtn {
+  background-color: transparent;
+  border: none;
+}
+
+.deleteVSBtnWrapperBtn:disabled {
+  cursor: not-allowed;
+}
+
+.deleteVSBtnWrapperBtn>svg {
+  pointer-events: none;
+}
+
+.sessionsTable th:nth-child(1),
+.sessionsTable td:nth-child(1) {
+  width: 10%
+}
+
+.sessionsTable th:nth-child(2),
+.sessionsTable td:nth-child(2) {
+  width: 16%
+}
+
+.sessionsTable th:nth-child(3),
+.sessionsTable td:nth-child(3) {
+  width: 54%
+}
+
+.sessionsTable th:nth-child(4),
+.sessionsTable td:nth-child(4) {
+  width: 10%
+}
+
+.sessionsTable th:nth-child(5),
+.sessionsTable td:nth-child(5) {
+  width: 10%
+}
+
+@media (max-width: 775px) {
+  .container6 {
+    font-size: .75rem;
+  }
+
+  .mainHeading {
+    font-size: 1rem;
+  }
+
+  .dashboardContainer button,
+  .sessionsTable {
+    font-size: .75rem;
+  }
+
+  .sessionTableContainer.scrollable {
+    max-height: 55vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .headingContainer {
+    flex-direction: column;
+    align-items: start;
+    gap: .5rem;
+  }
+
+  .sessionsTable {
+    font-size: .55rem;
+  }
+
+  .sessionTableContainer.scrollable {
+    max-height: 45vh;
+  }
+}

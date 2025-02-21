@@ -1,0 +1,95 @@
+.resultTitlesContainer h1 {
+  font-size: clamp(1.2rem, 8vw, 2.5rem);
+}
+
+.resultTitlesContainer p {
+  font-size: clamp(.8rem, 3.5vw, 1.2rem);
+}
+
+.partyCodeForResultFormContainer {
+  position: relative;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: .4rem;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+  border: 2px solid white;
+}
+
+.partyCodeForResultFormContainer>form {
+  width: 100%;
+}
+
+.partyCodeForResultFormContainer label {
+  position: absolute;
+  top: 46%;
+  transform: translateY(-50%);
+  left: 1.5rem;
+  pointer-events: none;
+  transition: 250ms;
+}
+
+.partyCodeForResultContainer:focus-within label,
+.partyCodeForResultLabelActive {
+  top: 2rem !important;
+  font-size: .85rem;
+}
+
+.partyCodeForResultFieldContainers {
+  width: 75%;
+}
+
+.resultTableContainer {
+  margin-top: .5rem;
+  width: fit-content;
+}
+
+.resultTableContainer.scrollable {
+  max-height: 200px;
+  overflow-y: auto;
+  justify-content: flex-start;
+}
+
+.resultTable {
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.resultTable th,
+.resultTable td {
+  border: 2px solid white;
+  padding: .5rem 2rem .5rem 2rem;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .partyCodeForResultFormContainer {
+    width: 95vw;
+  }
+
+  .partyCodeForResultFormContainer form {
+    padding: .75rem;
+    padding: 0;
+  }
+
+  .roleFormContainer {
+    width: 95vw;
+  }
+
+  .resultTable {
+    font-size: .75rem;
+    width: 95vw;
+  }
+
+  .resultTable th,
+  .resultTable td {
+    padding: .5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .winnersContainer h3 {
+    font-size: clamp(.65rem, 3.5vw, 1.2rem);
+    text-align: center;
+  }
+}

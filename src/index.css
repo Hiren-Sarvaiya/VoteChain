@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background-color: black;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: white;
+}
+
+#root {
+  height: calc(100% - 4rem);
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.mainContent {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.cur-p {
+  cursor: pointer;
+}
+
+.p1 {
+  padding: 1rem;
+}
+
+.gap1 {
+  gap: 1rem;
+}
+
+.gapHalf {
+  gap: .5rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+}
+
+.primaryBtn {
+  border: none;
+  color: black;
+  background-color: white;
+  padding: .5rem 1rem;
+  transition: 250ms;
+  font-size: 1rem;
+}
+
+.primaryBtn:hover {
+  border-radius: .5rem;
+}
+
+.primaryBtn:active {
+  border-radius: 0;
+}
+
+.primaryBtn:disabled {
+  cursor: not-allowed;
+  background-color: gray;
+}
+
+.secondaryBtn {
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  padding: .5rem 1rem;
+  transition: 250ms;
+  font-size: 1rem;
+}
+
+.secondaryBtn:hover {
+  border-radius: .5rem;
+}
+
+.secondaryBtn:active {
+  border-radius: 0;
+}
+
+.secondaryBtn:disabled {
+  cursor: not-allowed;
+}
+
+.inputs {
+  width: 100%;
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 1.75rem .5rem .5rem .5rem;
+  border: 1px solid white;
+  border-radius: .5rem;
+  color: white;
+  transition: 250ms;
+}
+
+.inputs:focus-visible {
+  outline: none;
+}
+
+.btnWrappers:hover .loadingBtns {
+  border-radius: 0.5rem;
+}
+
+.requiredRed {
+  color: red;
+}
+
+.roleLabelActive {
+  top: 1rem !important;
+  font-size: .85rem;
+}
+
+.errors {
+  position: absolute;
+  margin-left: .5rem;
+  color: red;
+  font-size: .75rem;
+  line-height: 1.5rem;
+}
+
+.spinner {
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  top: 50%;
+  left: 50%;
+  user-select: none;
+  cursor: not-allowed;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.addressContainer {
+  position: relative;
+  width: fit-content;
+}
+
+.copiedMessageContainer {
+  position: absolute;
+  top: 1.5rem;
+  right: -1.7rem;
+}
+
+.copiedMessageContainer .triangle {
+  height: 0;
+  width: 0;
+  border-left: .5rem solid transparent;
+  border-right: .5rem solid transparent;
+  border-bottom: .5rem solid black;
+  left: 50%;
+}
+
+.copiedMessageContainer .message {
+  background-color: black;
+  color: white;
+  padding: .2rem .5rem;
+  border-radius: .25rem;
+}
+
+nav>*,
+.primaryBtn,
+.secondaryBtn,
+label {
+  user-select: none;
+}
+
+/* Remove the default number input arrows */
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Chrome, Safari, Opera */
+  appearance: none;
+  /* Other browsers */
+}
+
+/* Optionally, you can also style the input to make it look cleaner */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.textAlignLeft {
+  text-align: left !important;
+}
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track (background) of the scrollbar */
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Handle (draggable part) of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
