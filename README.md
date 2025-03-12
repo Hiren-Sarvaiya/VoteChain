@@ -1,4 +1,4 @@
-# VoteChain 🇻🇳
+# VoteChain
 A blockchain-based voting system built using Solidity and React.
 
 ## Features 🚀
